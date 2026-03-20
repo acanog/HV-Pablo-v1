@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Andrés Cano - Hoja de Vida</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f2f5;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: #1e2a3e;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        /* header */
+        .header {
+            background: #0f2b3d;
+            color: white;
+            padding: 2rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .header .title {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+            border-top: 2px solid rgba(255,255,255,0.3);
+            display: inline-block;
+            padding-top: 0.5rem;
+        }
+
+        /* two column layout */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 2.2fr;
+            gap: 0;
+        }
+
+        /* sidebar */
+        .sidebar {
+            background: #f9fafc;
+            padding: 2rem 1.8rem;
+            border-right: 1px solid #e4e9f0;
+        }
+
+        .main {
+            padding: 2rem 2rem;
+        }
+
+        /* sections */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #0f2b3d;
+            border-left: 4px solid #2c7da0;
+            padding-left: 0.75rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .sidebar .section-title {
+            border-left-color: #2c7da0;
+            color: #0f2b3d;
+        }
+
+        /* contact items */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.9rem;
+            font-size: 0.9rem;
+            color: #2c3e50;
+            word-break: break-word;
+        }
+
+        .contact-item i {
+            width: 24px;
+            color: #2c7da0;
+            font-size: 1.1rem;
+        }
+
+        /* skills */
+        .skills-tag {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.5rem;
+        }
+
+        .skill-badge {
+            background: #eef2f8;
+            padding: 0.3rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #1e4663;
+        }
+
+        /* experience & education */
+        .exp-item, .edu-item, .cert-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: baseline;
+            margin-bottom: 0.3rem;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0f2b3d;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            color: #2c7da0;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .exp-date {
+            font-size: 0.8rem;
+            color: #5e7a93;
+            font-weight: 400;
+        }
+
+        .exp-desc {
+            font-size: 0.9rem;
+            color: #2c3e50;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .exp-desc ul {
+            padding-left: 1.2rem;
+            margin-top: 0.3rem;
+        }
+
+        .exp-desc li {
+            margin-bottom: 0.3rem;
+        }
+
+        .cert-item {
+            margin-bottom: 0.8rem;
+        }
+
+        .cert-name {
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .cert-detail {
+            font-size: 0.75rem;
+            color: #5e7a93;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        @media (max-width: 780px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: 0;
+                border-bottom: 1px solid #e4e9f0;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .main, .sidebar {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Pablo Andrés Cano</h1>
+        <div class="title">Desarrollador Backend · .NET · SQL · Azure</div>
+    </div>
+
+    <div class="grid-2">
+        <!-- SIDEBAR (contacto, skills, certificados) -->
+        <div class="sidebar">
+            <!-- Contacto -->
+            <div class="section">
+                <div class="section-title">Contacto</div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Medellín, Colombia</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>pablo.cano@email.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+57 300 123 4567</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>linkedin.com/in/pablo-andres-cano</span>
+                </div>
+            </div>
+
+            <!-- Habilidades Técnicas -->
+            <div class="section">
+                <div class="section-title">Stack Técnico</div>
+                <div class="skills-tag">
+                    <span class="skill-badge">C# / .NET</span>
+                    <span class="skill-badge">ASP.NET MVC</span>
+                    <span class="skill-badge">ASP.NET Core</span>
+                    <span class="skill-badge">Entity Framework</span>
+                    <span class="skill-badge">SQL Server</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">MongoDB</span>
+                    <span class="skill-badge">Azure / DigitalOcean</span>
+                    <span class="skill-badge">IIS</span>
+                    <span class="skill-badge">Git</span>
+                    <span class="skill-badge">Blazor</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">LINQ</span>
+                    <span class="skill-badge">Excel Avanzado</span>
+                </div>
+            </div>
+
+            <!-- Habilidades Blandas -->
+            <div class="section">
+                <div class="section-title">Aptitudes</div>
+                <div class="skills-tag">
+                    <span class="skill-badge">Documentación técnica</span>
+                    <span class="skill-badge">Gestión de proveedores</span>
+                    <span class="skill-badge">Resolución de incidencias</span>
+                    <span class="skill-badge">Atención al cliente</span>
+                    <span class="skill-badge">Trabajo en remoto</span>
+                    <span class="skill-badge">Adaptabilidad</span>
+                </div>
+            </div>
+
+            <!-- Certificaciones destacadas -->
+            <div class="section">
+                <div class="section-title">Certificaciones</div>
+                <div class="cert-item">
+                    <div class="cert-name">Curso de IA: ChatGPT, DALL-E, Hugging Face</div>
+                    <div class="cert-detail">Platzi · may 2023</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Fundamentos de Entity Framework</div>
+                    <div class="cert-detail">Platzi · abr 2023</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">C#: Manejo de Datos con LINQ</div>
+                    <div class="cert-detail">Platzi · feb 2023</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">SC-900 (Fundamentos de seguridad)</div>
+                    <div class="cert-detail">Intelligent Training · abr 2022</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">AZ-900 (Fundamentos de Azure)</div>
+                    <div class="cert-detail">Intelligent Training · mar 2022</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">HTML y CSS</div>
+                    <div class="cert-detail">Udemy · abr 2019</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Introducción a C#</div>
+                    <div class="cert-detail">Platzi · sept 2022</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">C# (Coderhouse)</div>
+                    <div class="cert-detail">oct 2022</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT (resumen, experiencia, educación) -->
+        <div class="main">
+            <!-- Perfil -->
+            <div class="section">
+                <div class="section-title">Perfil profesional</div>
+                <p style="font-size:0.95rem; line-height:1.5;">
+                    Desarrollador versátil con más de 3 años de experiencia en administración de bases de datos SQL y 1.5 años en desarrollo y actualización de APIs con .NET, así como proyectos en MVC con ASP.NET. 
+                    Experto en despliegues productivos y pruebas en Azure y DigitalOcean, configuración en IIS y control de versiones con Git. 
+                    Capacidad para gestionar múltiples tareas y colaborar en equipos internacionales.
+                </p>
+            </div>
+
+            <!-- Experiencia -->
+            <div class="section">
+                <div class="section-title">Experiencia laboral</div>
+
+                <!-- SINAPSIS -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Back-end Developer</span>
+                        <span class="exp-date">may 2022 – actualidad</span>
+                    </div>
+                    <div class="exp-company">SINAPSIS · Remoto</div>
+                    <div class="exp-desc">
+                        Desarrollo y mantenimiento de APIs en .NET, gestión de bases de datos SQL Server en Azure y DigitalOcean. Actualización de aplicaciones ASP.NET MVC, despliegues en entornos productivos y pruebas, configuración en IIS. Integración con herramientas de versionamiento Git. También experiencia en front-end con Blazor.
+                    </div>
+                </div>
+
+                <!-- BID -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Software Contractor</span>
+                        <span class="exp-date">may 2022 – actualidad</span>
+                    </div>
+                    <div class="exp-company">Banco Interamericano de Desarrollo (BID) · Remoto</div>
+                    <div class="exp-desc">
+                        Administración de bases de datos SQL, generación de nuevas APIs en .NET, actualización de proyectos ASP.NET MVC, despliegues en Azure y DigitalOcean, configuración en IIS y manejo de grandes volúmenes de información con Excel.
+                    </div>
+                </div>
+
+                <!-- ARUS -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Analista Servicios GTI nivel 1</span>
+                        <span class="exp-date">oct 2020 – may 2022</span>
+                    </div>
+                    <div class="exp-company">ARUS Tecnología · Híbrido, Medellín</div>
+                    <div class="exp-desc">
+                        Gestión de bases de datos SQL y MongoDB, desarrollo en Python, soporte técnico y resolución de incidencias.
+                    </div>
+                </div>
+
+                <!-- UNE -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Soporte en sitio</span>
+                        <span class="exp-date">oct 2017 – mar 2022</span>
+                    </div>
+                    <div class="exp-company">UNE</div>
+                    <div class="exp-desc">
+                        Atención al cliente, gestión de proveedores, soporte técnico presencial y administración de infraestructura básica.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Educación -->
+            <div class="section">
+                <div class="section-title">Educación</div>
+                <div class="edu-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Tecnólogo en Análisis y Desarrollo de Software</span>
+                        <span class="exp-date">may 2023 – may 2025</span>
+                    </div>
+                    <div class="exp-company">Servicio Nacional de Aprendizaje (SENA)</div>
+                </div>
+                <div class="edu-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Técnico en Desarrollo de Software</span>
+                        <span class="exp-date">2018 – 2019</span>
+                    </div>
+                    <div class="exp-company">Servicio Nacional de Aprendizaje (SENA)</div>
+                </div>
+            </div>
+
+            <!-- Idiomas o adicional (opcional) -->
+            <div class="section">
+                <div class="section-title">Adicional</div>
+                <div class="skills-tag">
+                    <span class="skill-badge">Inglés técnico (lectura/escritura)</span>
+                    <span class="skill-badge">Metodologías ágiles</span>
+                    <span class="skill-badge">Documentación de APIs</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
