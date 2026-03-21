@@ -21,7 +21,6 @@
             padding: 2rem 1rem;
         }
 
-        /* contenedor principal */
         .resume {
             max-width: 1100px;
             margin: 0 auto;
@@ -32,7 +31,6 @@
             transition: all 0.2s;
         }
 
-        /* header */
         .header {
             background: #0f2b3d;
             color: white;
@@ -57,7 +55,6 @@
             padding-top: 0.5rem;
         }
 
-        /* botón imprimir */
         .print-btn {
             position: absolute;
             top: 1.5rem;
@@ -81,13 +78,11 @@
             background: rgba(255,255,255,0.3);
         }
 
-        /* grid 2 columnas */
         .two-col {
             display: grid;
             grid-template-columns: 1fr 2.2fr;
         }
 
-        /* sidebar */
         .sidebar {
             background: #fafcff;
             padding: 2rem 1.8rem;
@@ -98,7 +93,6 @@
             padding: 2rem 2rem;
         }
 
-        /* secciones */
         .section {
             margin-bottom: 2rem;
         }
@@ -222,7 +216,6 @@
             }
         }
 
-        /* estilos de impresión */
         @media print {
             body {
                 background: white;
@@ -267,10 +260,41 @@
         <div class="sidebar">
             <div class="section">
                 <div class="section-title">Contacto</div>
-                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>San Carlos, Antioquia, Colombia</span></div>
-                <div class="contact-item"><i class="fas fa-envelope"></i><span>acanog90@gmail.com</span></div>
-                <div class="contact-item"><i class="fas fa-phone-alt"></i><span>+57 319 222 8903, +57 333 251 2487</span></div>
-                <div class="contact-item"><i class="fab fa-linkedin"></i><span>linkedin.com/in/pablo-andres-cano</span></div>
+
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://maps.app.goo.gl/odZEfE2DPHigYRLM9" target="_blank" rel="noopener noreferrer">
+                        San Carlos, Antioquia
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:acanog90@gmail.com">acanog90@gmail.com</a>
+                </div>
+
+                <div class="contact-item" style="margin-bottom: 0.4rem;">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="https://wa.me/573192228903" target="_blank" rel="noopener noreferrer">+57 319 222 8903</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="https://wa.me/573332512487" target="_blank" rel="noopener noreferrer">+57 333 251 2487</a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/pablo-andres-cano-0b11ba161/" target="_blank" rel="noopener noreferrer">
+                        Pablo Andres Cano
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">
+                        GitHub: tu-usuario
+                    </a>
+                </div>
             </div>
 
             <div class="section">
@@ -280,8 +304,10 @@
                     <span class="skill-badge">ASP.NET MVC</span>
                     <span class="skill-badge">ASP.NET Core</span>
                     <span class="skill-badge">Entity Framework</span>
+                    <span class="skill-badge">Dapper</span>
                     <span class="skill-badge">SQL Server</span>
                     <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">Oracle</span>
                     <span class="skill-badge">MongoDB</span>
                     <span class="skill-badge">Azure / DO</span>
                     <span class="skill-badge">IIS</span>
@@ -318,7 +344,7 @@
         <div class="main">
             <div class="section">
                 <div class="section-title">Perfil profesional</div>
-                <p>Desarrollador versátil con más de 3 años en administración de bases de datos SQL y 1.5 años desarrollando APIs en .NET, proyectos MVC con ASP.NET. Experto en despliegues en Azure y DigitalOcean, configuración en IIS, control de versiones con Git. Capacidad para múltiples tareas y equipos internacionales.</p>
+                <p>Desarrollador Backend con más de 4 años de experiencia en el ecosistema .NET y administración de bases de datos SQL. Especialista en el diseño e implementación de APIs RESTful con ASP.NET Core, optimización de consultas y despliegues en entornos cloud (Azure, DigitalOcean). Experiencia demostrada en la modernización de aplicaciones heredadas, mejora de rendimiento y trabajo colaborativo con equipos internacionales bajo metodologías ágiles. Enfocado en escribir código limpio, escalable y bien documentado.</p>
             </div>
 
             <div class="section">
@@ -327,32 +353,61 @@
                 <div class="exp-item">
                     <div class="exp-header"><span class="exp-title">Back-end Developer</span><span class="exp-date">may 2022 – actualidad</span></div>
                     <div class="exp-company">SINAPSIS · Remoto</div>
-                    <div class="exp-desc">APIs en .NET, gestión SQL Server en Azure/DigitalOcean, actualización de proyectos ASP.NET MVC, despliegues productivos, IIS, Git. Experiencia en Blazor.</div>
+                    <div class="exp-desc">
+                        <ul>
+                            <li>Diseñé e implementé APIs RESTful con .NET Core y Entity Framework, reduciendo el tiempo de respuesta de consultas críticas.</li>
+                            <li>Administré bases de datos SQL Server en entornos Azure y DigitalOcean, optimizando índices y procedimientos almacenados.</li>
+                            <li>Migré proyectos heredados de ASP.NET MVC a .NET Core, mejorando la mantenibilidad y el rendimiento.</li>
+                            <li>Configuré entornos productivos en IIS, automatizando despliegues con Git y scripts de CI/CD.</li>
+                            <li>Desarrollé componentes en Blazor para módulos internos, facilitando la adopción de tecnologías modernas.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="exp-item">
                     <div class="exp-header"><span class="exp-title">Software Contractor</span><span class="exp-date">may 2022 – actualidad</span></div>
                     <div class="exp-company">Banco Interamericano de Desarrollo · Remoto</div>
-                    <div class="exp-desc">Administración de BD SQL, generación de APIs .NET, actualización de MVC, despliegues en Azure/DigitalOcean, configuración IIS y manejo de grandes volúmenes con Excel.</div>
+                    <div class="exp-desc">
+                        <ul>
+                            <li>Lideré la administración de bases de datos SQL Server con volúmenes de grandes cantidades de registros, optimizando consultas y mejorando tiempos de ejecución.</li>
+                            <li>Desarrollé APIs en .NET Core para la integración con sistemas externos, garantizando seguridad mediante JWT y OAuth2.</li>
+                            <li>Actualicé aplicaciones MVC obsoletas a .NET 6, reduciendo deuda técnica y mejorando la escalabilidad.</li>
+                            <li>Gestioné despliegues en Azure App Services y DigitalOcean, configurando IIS y automatizando procesos con PowerShell.</li>
+                            <li>Implementé soluciones en Excel con macros y Power Query para procesar grandes conjuntos de datos, optimizando reportes manuales que tomaban horas a solo minutos.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="exp-item">
                     <div class="exp-header"><span class="exp-title">Analista Servicios GTI nivel 1</span><span class="exp-date">oct 2020 – may 2022</span></div>
                     <div class="exp-company">ARUS Tecnología · Híbrido</div>
-                    <div class="exp-desc">Gestión SQL y MongoDB, desarrollo en Python, soporte técnico y resolución de incidencias.</div>
+                    <div class="exp-desc">
+                        <ul>
+                            <li>Administré bases de datos SQL Server y MongoDB, realizando tuning de consultas y asegurando alta disponibilidad.</li>
+                            <li>Automaticé procesos de extracción y transformación de datos con Python, reduciendo el tiempo de generación de reportes en un 60%.</li>
+                            <li>Brindé soporte técnico nivel 1 y 2, resolviendo incidencias con un alto índice de satisfacción.</li>
+                            <li>Documenté procedimientos de resolución de fallas, creando una base de conocimiento que disminuyó tiempos de escalamiento.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="exp-item">
                     <div class="exp-header"><span class="exp-title">Soporte en sitio</span><span class="exp-date">oct 2017 – mar 2022</span></div>
                     <div class="exp-company">UNE</div>
-                    <div class="exp-desc">Atención al cliente, gestión de proveedores, soporte técnico presencial.</div>
+                    <div class="exp-desc">
+                        <ul>
+                            <li>Atendí y resolví problemas técnicos en sitio y aumentando la satisfacción del cliente.</li>
+                            <li>Coordiné con proveedores de telecomunicaciones para garantizar la continuidad del servicio, gestionando SLA y tiempos de respuesta.</li>
+                            <li>Realicé diagnósticos y reparaciones de equipos, logrando una alta tasa de resolución en primera visita.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <div class="section">
                 <div class="section-title">Educación</div>
                 <div class="edu-item">
-                    <div class="exp-header"><span class="exp-title">Tecnólogo en Análisis y Desarrollo de Software</span><span class="exp-date">may 2023 – may 2025</span></div>
+                    <div class="exp-header"><span class="exp-title">Tecnólogo en Análisis y Desarrollo de Software</span><span class="exp-date">may 2024 – actualidad</span></div>
                     <div class="exp-company">Servicio Nacional de Aprendizaje (SENA)</div>
                 </div>
                 <div class="edu-item">
