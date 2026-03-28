@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* (mismo CSS que tenías, sin cambios) */
         * {
             margin: 0;
             padding: 0;
@@ -15,29 +14,30 @@
         }
 
         body {
-            background: #eef2f5;
+            background: #0f172a;
             font-family: 'Inter', sans-serif;
             line-height: 1.5;
-            color: #1e2a3e;
+            color: #e2e8f0;
             padding: 2rem 1rem;
         }
 
         .resume {
             max-width: 1100px;
             margin: 0 auto;
-            background: #ffffff;
+            background: #1e293b;
             border-radius: 28px;
-            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.2);
+            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.5);
             overflow: hidden;
             transition: all 0.2s;
         }
 
         .header {
-            background: #0f2b3d;
+            background: #0f172a;
             color: white;
             padding: 2rem 2rem;
             text-align: center;
             position: relative;
+            border-bottom: 1px solid #2c7da0;
         }
 
         .header h1 {
@@ -52,15 +52,16 @@
             font-weight: 400;
             opacity: 0.9;
             display: inline-block;
-            border-top: 2px solid rgba(255,255,255,0.3);
+            border-top: 2px solid rgba(44,125,160,0.5);
             padding-top: 0.5rem;
+            color: #cbd5e1;
         }
 
         .print-btn {
             position: absolute;
             top: 1.5rem;
             right: 2rem;
-            background: rgba(255,255,255,0.15);
+            background: #2c7da0;
             border: none;
             color: white;
             padding: 0.5rem 1rem;
@@ -72,11 +73,12 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            backdrop-filter: blur(4px);
+            text-decoration: none;
         }
 
         .print-btn:hover {
-            background: rgba(255,255,255,0.3);
+            background: #1f5e7a;
+            transform: translateY(-2px);
         }
 
         .two-col {
@@ -85,9 +87,9 @@
         }
 
         .sidebar {
-            background: #fafcff;
+            background: #0f172a;
             padding: 2rem 1.8rem;
-            border-right: 1px solid #e9edf4;
+            border-right: 1px solid #2c7da0;
         }
 
         .main {
@@ -103,7 +105,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #0f2b3d;
+            color: #f1f5f9;
             border-left: 4px solid #2c7da0;
             padding-left: 0.75rem;
             margin-bottom: 1.2rem;
@@ -124,6 +126,15 @@
             font-size: 1.1rem;
         }
 
+        .contact-item a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-item a:hover {
+            color: #2c7da0;
+        }
+
         .skills-tag {
             display: flex;
             flex-wrap: wrap;
@@ -132,12 +143,18 @@
         }
 
         .skill-badge {
-            background: #eef2f8;
+            background: #1e293b;
             padding: 0.3rem 0.9rem;
             border-radius: 30px;
             font-size: 0.8rem;
             font-weight: 500;
-            color: #1e4663;
+            color: #cbd5e1;
+            border: 1px solid #334155;
+            transition: all 0.2s;
+        }
+        .skill-badge:hover {
+            border-color: #2c7da0;
+            transform: translateY(-2px);
         }
 
         .exp-item, .edu-item, .cert-item {
@@ -155,7 +172,7 @@
         .exp-title {
             font-weight: 700;
             font-size: 1rem;
-            color: #0f2b3d;
+            color: #f1f5f9;
         }
 
         .exp-company {
@@ -167,12 +184,12 @@
 
         .exp-date {
             font-size: 0.8rem;
-            color: #5e7a93;
+            color: #94a3b8;
         }
 
         .exp-desc {
             font-size: 0.9rem;
-            color: #2c3e50;
+            color: #cbd5e1;
             margin-top: 0.5rem;
             line-height: 1.5;
         }
@@ -185,20 +202,23 @@
         .cert-name {
             font-weight: 600;
             font-size: 0.85rem;
+            color: #e2e8f0;
         }
 
         .cert-detail {
             font-size: 0.75rem;
-            color: #5e7a93;
+            color: #94a3b8;
         }
 
         @media (max-width: 780px) {
             .two-col {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column-reverse;
             }
             .sidebar {
                 border-right: 0;
-                border-bottom: 1px solid #e9edf4;
+                border-top: 1px solid #2c7da0;
+                margin-top: 1rem;
             }
             .header h1 {
                 font-size: 2rem;
@@ -207,7 +227,6 @@
                 position: static;
                 margin-top: 1rem;
                 display: inline-flex;
-                background: rgba(255,255,255,0.2);
             }
             .header {
                 text-align: center;
@@ -227,19 +246,25 @@
                 box-shadow: none;
                 border-radius: 0;
                 max-width: 100%;
+                background: white;
             }
             .print-btn {
                 display: none;
             }
-            .sidebar {
-                background: #fafcff;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+            .sidebar, .main {
+                background: white;
+                color: black;
+            }
+            .section-title {
+                color: #0f2b3d;
             }
             .skill-badge {
                 background: #eef2f8;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+                color: #1e4663;
+                border: none;
+            }
+            .exp-title, .cert-name {
+                color: black;
             }
             a {
                 text-decoration: none;
@@ -253,7 +278,9 @@
     <div class="header">
         <h1>Pablo Andrés Cano</h1>
         <div class="title">Desarrollador Backend · .NET · SQL · Azure</div>
-        <button class="print-btn" onclick="window.print();"><i class="fas fa-print"></i> Guardar como PDF</button>
+        <button class="print-btn" onclick="descargarPDF()">
+            <i class="fas fa-file-pdf"></i> Descargar CV (PDF ATS)
+        </button>
     </div>
 
     <div class="two-col">
@@ -338,7 +365,6 @@
                 <div class="cert-item"><div class="cert-name">C#: Manejo de Datos con LINQ</div><div class="cert-detail">Platzi · feb 2023</div></div>
                 <div class="cert-item"><div class="cert-name">SC-900 · AZ-900</div><div class="cert-detail">Intelligent Training · 2022</div></div>
                 <div class="cert-item"><div class="cert-name">HTML y CSS</div><div class="cert-detail">Udemy · 2019</div></div>
-                <!-- Nuevas certificaciones del PDF -->
                 <div class="cert-item"><div class="cert-name">Introducción a C#</div><div class="cert-detail">Platzi</div></div>
                 <div class="cert-item"><div class="cert-name">C#</div><div class="cert-detail">Coderhouse</div></div>
                 <div class="cert-item"><div class="cert-name">Python 3 Plus</div><div class="cert-detail">UDEMI</div></div>
@@ -437,5 +463,13 @@
         </div>
     </div>
 </div>
+
+<script>
+function descargarPDF() {
+    // URL de descarga directa del PDF (export=download)
+    const url =  "https://drive.google.com/file/d/1J-JIW3a7VtpR32VNo1hgKUanhH9VY56A/view?usp=sharing";
+    window.open(url, '_blank');
+}
+</script>
 </body>
 </html>
